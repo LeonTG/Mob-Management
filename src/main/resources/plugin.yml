@@ -1,0 +1,10 @@
+name: ${project.name}
+main: ${project.groupId}.${project.artifactId}.Main
+version: ${project.version}
+author: LeonTG77
+description: Disable certain mobs from spawning in certain worlds.
+
+commands:
+  mobreload:
+    description: Reload the mob manager config.
+    aliases: [mrl, mobrl]
