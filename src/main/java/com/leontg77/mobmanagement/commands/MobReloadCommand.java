@@ -24,6 +24,11 @@ public class MobReloadCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+        if (!sender.hasPermission("mob.manage")) {
+            sender.sendMessage(ChatColor.RED + "You don't have permission.");
+            return true;
+        }
+
         sender.sendMessage(PREFIX + "Reloading config...");
         plugin.reloadConfig();
 
